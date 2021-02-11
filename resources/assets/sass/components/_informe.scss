@@ -1,0 +1,20 @@
+.container-titulo{
+    background: #da6a40  !important;
+    color: white !important;
+    font-size: 1rem !important;
+    border: thin solid black !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 6vh !important;
+    padding: 0 !important;
+
+    span{
+        font-size: 1.2rem !important;
+        font-weight: bold;
+    }
+}
+.titulo2{
+    padding: 0 !important;
+    margin-bottom: 4vh !important;
+}

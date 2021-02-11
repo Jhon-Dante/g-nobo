@@ -1,0 +1,40 @@
+* {
+  font-family: Roboto;
+}
+​ .header {
+  margin-top: 1rem;
+  text-align: center;
+}
+​ .img {
+  text-align: center;
+}
+​ .img .logo {
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
+}
+​ .text-center,
+.title {
+  text-align: center;
+}
+​ .text-left {
+  text-align: left;
+}
+​ .text-uppercase {
+  text-transform: uppercase;
+}
+​ .border-top {
+  border-top: 1px solid;
+  border-top-style: dotted;
+}
+​ table.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+​ table.bordered td,
+table.bordered th {
+  border: 1px solid black;
+}
+​ table {
+  width: 100%;
+}

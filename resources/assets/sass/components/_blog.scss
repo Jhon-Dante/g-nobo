@@ -1,0 +1,45 @@
+.textarea-wara{
+    min-height: 7rem;
+    resize: none;
+}
+.content-image{
+    margin-bottom: 10px;
+}
+.bold{
+    font-weight: bold;
+}
+.margin-top{
+    margin-top: 20px;
+}
+.container-options{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    label{
+        flex: 1 1 100%;
+    }
+}
+fieldset{
+    margin: 10px 2px !important;
+    border: 1px solid #efefefec !important;
+    padding: 1rem !important;
+    position: relative;
+}
+.label-impegno{
+    font-weight: bold;
+}
+.items__file{
+    position: relative;
+}
+.names{
+    margin-bottom: 1rem;
+}
+.sizes_stop{
+    margin: .5rem .2rem !important;
+    border-color: rgba($color: #000000, $alpha: .3);
+    border-radius: .4rem;
+    legend{
+        font-weight: bold;
+        padding: 0 10px;
+    }
+}

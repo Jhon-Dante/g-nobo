@@ -1,0 +1,49 @@
+@font-face {
+    font-family: $font-family;
+    src: url($fonts-path+$font-family+"-Regular.ttf");
+}
+
+@font-face {
+    font-family: $font-family-bold;
+    src: url($fonts-path+$font-family+"-Bold.ttf");
+}
+
+@font-face {
+    font-family: $font-family-black;
+    src: url($fonts-path+$font-family+"-Black.ttf");
+}
+
+@font-face {
+    font-family: $font-family-medium;
+    src: url($fonts-path+$font-family+"-Regular.ttf");
+}
+
+@font-face {
+    font-family: $font-family-semibold;
+    src: url($fonts-path+$font-family+"-Regular.ttf");
+}
+
+@font-face {
+    font-family: $font-family-extrabold;
+    src: url($fonts-path+$font-family-extrabold+".ttf");
+}
+
+.font-medium {
+    font-family: $font-family-medium !important;
+}
+
+.font-bold {
+    font-family: $font-family-bold !important;
+}
+
+.font-semibold {
+    font-family: $font-family-semibold !important;
+}
+
+.font-black {
+    font-family: $font-family-bold !important;
+}
+
+.font-extrabold {
+    font-family: $font-family-extrabold !important;
+}

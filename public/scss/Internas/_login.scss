@@ -1,0 +1,106 @@
+// Login
+
+#login {
+	.right {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	.right-line-container {
+		position: relative;
+	}
+	.right-line {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		height: 100%;
+		width: 3px;
+		@include degradado();
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	form {
+		margin-left: 30px;
+		@media (max-width: 767px) {
+			margin-left: 0px;
+		}
+		@media (min-width: 768px) {
+			.form-group {
+				max-width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}		
+	}
+	// background-image: url('../img/login-bg.svg');
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position: center center;	
+	background-color: black;
+	// @include size();
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	@media (max-width: 767px) {
+		.row, .col-md-6 {
+			padding: 0px !important;
+			margin: 0px !important;
+		}
+		form {
+			margin-top: 30px;
+		}
+	}
+	& > .row {
+		width: 100%;
+	}
+	p, a, label {
+		color: $white !important;
+	}
+	a {
+		text-decoration: none !important;
+		text-align: center;
+		font-family: 'Segoe Bold Italic';
+		font-size: 20px;
+		color: $white;
+	}
+	p {
+		font-size: 18px;
+		width: 80%;
+		margin-right: auto;
+		margin-left: auto;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+	h2 {
+		font-size: 40px;
+		@media (max-width: 767px) {
+			font-size: 30px;
+		}
+	}
+	label {
+		width: 100%;
+		text-align: left;
+	}
+	button {
+		@include button();
+		border-radius: 10px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		width: 200px;
+		font-size: 18px !important;
+	}
+	.item-right {
+		text-align: center;
+		font-family: 'Segoe Bold Italic';
+		font-size: 20px;
+		color: $white;
+		text-decoration: none !important;
+		img {
+			width: 15px;
+			margin-right: 10px;
+		}
+	}
+}

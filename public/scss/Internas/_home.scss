@@ -1,0 +1,300 @@
+// Home
+
+#home {
+  .carousel-inner {
+    height: 29.19rem;
+
+    @media (max-width: 2560px) {
+      height: 29.19rem !important;
+    }
+
+    @media (max-width: 1920px) {
+      height: 29.19rem !important;
+    }
+
+    @media (max-width: 1440px) {
+      height: 29.19rem !important;
+    }
+
+    @media (max-width: 1366px) {
+      height: 29.19rem !important;
+    }
+
+    @media (max-width: 1280px) {
+      height: 29.19rem  !important;
+    }
+
+    @media (max-width: 1024px) {
+      height: 29.19rem !important;
+    }
+
+    @media (max-width: 768px) {
+      height: 255px !important;
+    }
+
+    @media (max-width: 450px) {
+      height: 140px !important;
+    }
+
+    @media (max-width: 425px) {
+      height: 140px !important;
+    }
+
+    @media (max-width: 414px) {
+      height: 140px !important;
+    }
+
+    @media (max-width: 375px) {
+      height: 170px !important;
+    }
+
+    @media (max-width: 320px) {
+      height: 130px !important;
+    }
+  }
+  .carousel-item {
+    height: 100%;
+    background-size: cover;
+    // @media (max-width: 425px) {
+    //   background-size: contain;
+    // }
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  background-image: none !important;
+}
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown > .dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+  pointer-events: none;
+}
+
+nav .navbar-right .dropdown span {
+  text-decoration: none;
+  color: #000 !important;
+}
+nav .navbar-right .dropdown a {
+  text-decoration: none;
+}
+
+header .navbar .dropdown-menu .dropdown-item {
+  text-align: center;
+  margin-top: 0;
+  transition: 0.1s;
+    span {
+    color: $white !important;
+  }
+}
+
+header .navbar .dropdown-menu .dropdown-item {
+  border: 1px solid transparent !important;
+  background-color: $verde-tato;
+  color: $white;
+  padding: 10px 0;
+  font-size: 0.7rem;
+  font-family: "Bogle-Bold";
+  &:hover {
+    color: white !important;
+  }
+}
+.btn-primary img {
+  width: 20px;
+}
+.shop-category-container {
+  //border-bottom: solid 1px #bbbbbb;
+  h2 {
+   text-align: left !important;
+   padding: 0 48px;
+  }
+}
+
+.shop-product-price span {
+  font-family: $font-family-bold;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #000;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.shop-product-button {
+  text-align: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tienda .title-pro img {
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+}
+nav .navbar-right .dropdown span {
+  text-decoration: none;
+  color: $black !important;
+          font-weight: 600;
+}
+
+.shop-category-container h2 {
+  font-size: 18px !important;
+}
+.shop .carousel-inner {
+  height: 350px;
+}
+header .navbar-right-badge {
+  background-color: $naranja-tato;
+  color: #fff;
+}
+.shop-cart-container header {
+  padding: 1rem;
+  font-size: 18px;
+}
+.shop-cart-item-data-price {
+  font-size: 18px;
+  font-weight: 800;
+}
+.shop-product-price span {
+  background-color: #fff;
+}
+.shop-cart-item-data-name {
+  font-size: 16px;
+  font-weight: 800;
+}
+.shop-cart-subtotal {
+  font-size: 16px;
+  font-weight: 800;
+}
+.btn-primary {
+  font-size: 16px;
+  font-weight: 800;
+}
+.shop-product-button button.btn {
+  font-size: 14px !important;
+}
+.shop-cart-container header {
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 800;
+}
+header .navbar-right a {
+  font-size: 14px;
+}
+#ver-producto .producto-container .container-description .nl2br {
+  text-transform: initial;
+  font-size: 20px;
+}
+header .navbar .dropdown-menu .dropdown-item {
+  font-size: 14px;
+  font-family: "BogleWeb";
+}
+.well {
+  max-height: 100%;
+}
+.justify-content-between span:last-child {
+  font-size: 18px;
+}
+body {
+  font-family: BogleWeb, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+
+#divMenu, ul, li, li li {  
+  margin: 0;  
+  padding: 0;  
+}  
+
+#divMenu {  
+  width: auto;  
+  height: auto;  
+ -webkit-transition: 0.2s ease-out;
+-moz-transition:  0.2s ease-out;
+transition:  0.3s ease-out;
+}  
+
+#divMenu ul  
+{  
+  line-height: 25px;  
+}  
+
+#divMenu li {  
+        cursor: pointer;
+        padding: 5px 12px !important;
+        list-style: none;
+        position: relative;
+        background: $gris-tato;
+        padding: 5px 0;
+        border-bottom: 1px solid #eee;
+}  
+
+#divMenu li li {  
+  list-style: none;  
+  position: relative;  
+  background: $gris-tato; 
+  color: $black; 
+  left: 242px;
+  top: -28px;
+  z-index: 6;
+  padding: 12px;
+  cursor: pointer;
+  label {
+    cursor: pointer;
+  }
+  &:last-child {
+  border-radius: 0 0 0.5rem 0;
+}
+  &:first-child {
+  border-radius: 0 0.5rem 0 0;
+}
+}  
+
+
+#divMenu ul li a {  
+  width: 148px;  
+  height: 25px;  
+  display: block;  
+  text-decoration: none;  
+  text-align: center;  
+  font-family: Georgia,'Times New Roman',serif;  
+  color:#ffffff;  
+}  
+
+#divMenu ul ul {  
+  position: absolute;  
+  visibility: hidden;  
+  top: 27px;  
+}  
+
+#divMenu ul li:hover ul {  
+  visibility: visible;  
+}  
+
+#divMenu li:hover {  
+  background-color: $verde-tato;
+  color: $white;  
+  -webkit-transition: 0.2s ease-out;
+-moz-transition:  0.2s ease-out;
+transition:  0.3s ease-out; 
+}  
+
+#divMenu ul li:hover ul li a:hover {  
+  background-color: $white; 
+  color: $verde-tato; 
+  -webkit-transition: 0.2s ease-out;
+-moz-transition:  0.2s ease-out;
+transition:  0.3s ease-out;
+}  
+
+#divMenu a:hover {  
+  font-weight: bold;  
+} 
+
+.abs::-webkit-scrollbar {
+ z-index:10;
+}  

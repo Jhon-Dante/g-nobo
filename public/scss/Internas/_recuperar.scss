@@ -1,0 +1,32 @@
+// Recuperar
+
+#recuperar {
+	// background-image: url('../img/fondo-login.jpg');
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// background-position: center center;	
+	// @include size();
+	min-height: 100vh;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	form {
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		label, p {
+			color: $white;
+		}
+		p {
+			text-align: center;
+			font-size: 18px;
+		}
+		button {
+			@include button();
+			min-width: 200px;
+		}
+	}
+}

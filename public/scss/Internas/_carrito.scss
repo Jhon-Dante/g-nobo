@@ -1,0 +1,288 @@
+// Carrito
+
+#carrito {
+	table {
+		@media (max-width: 991px) {
+			&.table-no-responsive {
+				display: none;
+			}			
+		}
+		td.empty {
+			border-top: 0px !important;
+		}
+		thead {
+			th {
+				color: $white;
+				font-family: $font-family;
+				font-weight: normal;
+				border-top: 0px !important;
+			}
+		}
+		tbody {
+			td {
+				color: $white;
+				
+			}	
+		}
+		button {
+			padding: 0px !important;
+			font-size: 22px;
+			color: $white !important;
+			background-color: transparent;
+			margin-top: -5px;
+		}
+	}
+	.container-responsive {
+		display: none;
+		@media (max-width: 991px) {
+			display: block;
+		}
+	}
+	.ui-accordion-content {
+		height: auto !important;
+		border: 0px !important;
+		background-color: transparent !important;
+		color: $white !important;
+		font-size: 14px !important;
+		display: flex;
+		justify-content: center;
+		padding-left: 0px !important;
+		// align-items: center;
+		flex-direction: column;
+	 	p {
+		 	margin-bottom: 5px !important;
+		}
+		.container-accordion {
+			width: 90%;
+			margin-left: 0px;
+		}
+		.item-cantidad {
+			display: inline-block;
+			width: 100px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		button.btn-delete {
+			padding: 0px !important;
+			font-size: 22px;
+			color: $white !important;
+			background-color: transparent;
+			margin-top: -5px;
+			position: absolute;
+			right: 10px;
+			display: inline-block;
+			width: 10%;
+		}
+	}
+	.ui-accordion-header-active {
+		color: $white !important;
+	}
+	.ui-accordion-header {
+		outline: 0px !important;
+		background-color: transparent !important;
+		border-radius: 0px !important;
+		border: 0px !important;
+		border-bottom: 2px solid $white !important;
+		font-size: 16px !important;
+		font-family: 'Segoe Bold';
+		color: $white !important;
+	}
+	.almayor {
+		font-size: 11px;
+		margin-bottom: 0px;
+		position: relative;
+		font-style: italic;
+		&.almayor-responsive {
+			margin-bottom: 20px;
+			margin-top: 0px;
+		}
+	}
+	.item-cantidad {
+		display: inline-block;
+		background-color: $white;
+		color: $black;
+		.add, .remove {
+			padding: 0px !important;
+			border-radius: 0px !important;
+			margin-top: -7.5px;
+			background-color: transparent !important;
+			position: relative;
+			img {
+				width: 15px;
+				margin: 0 auto;
+				margin-left: 5px;
+				margin-right: 5px;
+				position: relative;
+				top: -1.5px;
+				cursor: pointer;
+			}
+		}	
+		.add {
+			right: 1.5px;
+		}
+		.remove {
+			left: 1.5px;
+		}	
+		span {
+			font-size: 20px;
+			border-right: 1px solid #c0c0c0;
+			border-left: 1px solid #c0c0c0;
+			width: auto;
+			min-width: 35px;
+			padding-right: 5px;
+			padding-left: 5px;
+			display: inline-block;
+			text-align: center;
+		}
+	}
+	.envio {
+		font-size: 15px;
+		i.circle-gold {
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			@include degradado();
+			border-radius: 30px;
+			margin-right: 5px;
+		}
+	}
+	.total {
+		font-family: 'Segoe Bold';
+		font-size: 20px;
+		&.total-gold {
+			color: $dorado;
+		}
+	}
+	.btn-pagar {
+		display: block;
+		@include degradado();
+		font-size: 20px;
+		font-family: 'Segoe Bold';
+		border-radius: 40px;
+		border-top-left-radius: 0px !important;
+		border-bottom-right-radius: 0px !important;
+		width: 135px;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+	button.regresar {
+		display: none;
+		font-size: 16px !important;
+		margin-top: 2.5px;
+		margin-bottom: 2.5px;
+		@include degradado();
+		box-sizing: border-box;
+		border-radius: 10px !important;
+		padding: 0px !important;
+		border-width: 2px !important;
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		height: 46px;
+		span {
+			align-items: center;
+			border-radius: 10px !important;
+			background-color: $black;
+			color: $white;
+			font-style: italic;
+			display: flex;
+			justify-content: center;
+			width: calc(100% - 4px);
+			padding: 20px;
+			padding-top: 8px;
+			padding-bottom: 8px;
+			margin: 0 auto;
+			height: 42px;
+			img {
+				width: 10px;
+				padding: 0px;
+				margin-right: 10px;
+			}
+		}
+	}
+	.bold {
+		font-family: 'Segoe Bold';
+	}
+	.footer-carrito {
+		h3 {
+			font-style: italic;
+			font-size: 20px;
+			color: $white;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		a {
+			font-style: italic;
+			font-family: 'Segoe SemiBold';
+			color: $white;
+			text-decoration: none !important;
+			display: inline-block;
+			margin-top: 10px;
+		}
+	}
+	.modal {
+		.modal-container {
+			background-color: $black;
+			padding: 25px;
+			p {
+				font-size: 15px;
+			}
+			a {
+				img {
+					width: 80px;
+				}
+			}
+		}
+		.modal-body {
+			@include degradado();
+			padding: 8px;
+		}		
+		button {
+			@include button();
+			min-width: 150px;
+			font-size: 15px !important;
+		}
+		color: $white;
+		text-align: center;
+		padding: 10px;
+		&#modal-pago > .modal-dialog {
+			min-width: 80% !important;
+			@media (max-width: 767px) {
+				width: 100%;
+			}
+			p {
+				max-width: 350px;
+				margin: 0 auto;
+				margin-bottom: 30px;
+				margin-top: 10px;
+			}
+			.img-pago {
+				max-width: 200px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+		}
+		&#modal-proceder {
+			.modal-container {
+				p {
+					color: $black;
+					max-width: 200px;
+					margin: 0 auto;
+					margin-bottom: 30px;
+				}
+				border-radius: 5px;
+				background-color: $gris !important;
+				button {
+					border-radius: 10px !important;
+					font-family: 'Segoe Bold';
+					font-style: italic;
+					margin: 0 auto;
+					@media (max-width: 767px) {
+						margin-bottom: 10px;
+						width: 100%;
+					}					
+				}
+			}
+		}
+	}
+}

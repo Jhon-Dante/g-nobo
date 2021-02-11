@@ -1,0 +1,359 @@
+.verification {
+	select[disabled]::-ms-value {
+		color: $white !important;
+	}
+	background-color: $gray-light;
+    padding-top: $navbar-height;
+    &-title {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+
+        h1 {
+            font-size: 2rem;
+            flex: 1 auto;
+        }
+    }
+
+    .stripe-form {
+    	.form-check {
+    		padding-left: 30px;
+    	}
+    }
+
+    &-bg {
+        background-color: $gray;
+        height: 160px;
+    }
+
+    &-content {
+        top: -140px;
+        position: relative;
+        display: flex;
+		justify-content: space-evenly;
+		@media all and (-ms-high-contrast:none)
+		{
+			*::-ms-backdrop, &-content {/* IE11 */
+				justify-content: space-around !important;
+			}  
+		}
+		@media(max-width: 680px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+    }
+
+    &-cart {
+		border-radius: 5px;
+		width: 33%;
+		background-color: $white;
+	
+		@media(max-width: 1024px) {
+			width: 45%;
+		}
+
+		@media(max-width: 680px) {
+			width: 90%;
+		}
+
+		@media(max-width: 425px) {
+			width: 98%;
+		}
+ 		
+		&-container {
+			overflow-y: auto;
+			overflow: hidden;
+			max-height: 104vh;
+			width: 100%;
+		}
+
+        header {
+			padding: .3rem;
+			background-color: $grismedio-tato;
+			color: $white;
+			padding: .5rem 1rem;
+			font-family: $font-family-bold;
+			text-align: center;
+			border-radius: 5px;
+			margin: .4rem;
+			margin-bottom: 2rem;
+		}   
+		
+		section {
+			overflow: hidden;
+			overflow-y: auto;
+			@media (min-width: 600px) {
+				max-height: 100vh;
+			}
+		}
+
+        &-item {
+			display: flex;
+			align-items: center;
+			padding: 1rem;
+			position: relative;
+			
+			&:nth-child(even) {
+				background-color: $gray;
+
+				.verification-cart-item-data-price {
+					background-color: $white;
+				}
+			}
+
+			&:nth-child(odd) {
+				.verification-cart-item-data-price {
+					background-color:$gray  !important;
+				}
+			}
+
+			&-photo {
+				width: 4.7em;
+				height: 4.7em;
+				border-radius: 50%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				img {
+					border-radius: 50%;
+					object-fit: contain;
+				}
+			}
+			
+			&-data {
+				margin-left: 1rem;
+				flex: 1;
+
+				&-unid {
+					color: $white;
+				}
+				
+				&-name {
+					font-size: .95rem;
+					font-family: $font-family-bold;
+					line-height: 1.2;
+				}
+
+				&-unitary {
+					margin-top: .1rem;
+					font-family: $font-family-bold;
+					color: rgba($black, .7);
+					font-size: .80rem;
+				}
+
+				&-price {
+					font-family: $font-family-bold;
+					font-size: 1.1rem;
+					border-radius: 3px;
+					padding: .1rem .4rem;
+					// margin-left: auto;
+					color: $blue;
+				}
+
+				&-buttons {
+					display: flex;
+					align-items: center;
+					margin-top: .6rem;
+					justify-content: space-evenly;
+				}
+
+				&-controls {
+					border-radius: 15px;
+					background-color: $dark-blue;
+					border: 1px solid transparent;
+					display: flex;
+					align-items: center;
+					button, input {
+						font-family: $font-family-bold;
+						background-color:  $dark-blue;
+						text-align: center;
+						border: none;
+					}
+
+					button {
+						font-size: 1.2rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					&--add {
+						padding-left: 1rem;
+						border-bottom-left-radius: 15px;
+						border-top-left-radius: 15px;
+					}
+
+					&--sub {
+						padding-right: 1rem;
+						border-bottom-right-radius: 15px;
+						border-top-right-radius: 15px;
+					}
+
+					input {
+						padding-left: 5px;
+						width: 50px;
+						text-align: center;
+					}
+					
+					input[type=number]::-webkit-inner-spin-button, 
+					input[type=number]::-webkit-outer-spin-button { 
+						-webkit-appearance: none; 
+						margin: 0; 
+					}
+
+					input[type=number] { -moz-appearance:textfield; }
+				}
+            }
+		}
+		&-subtotal {
+			&-free {
+				font-size: .90rem;
+			}
+
+		}
+		&-total {
+				color: $white;
+				background-color: $grismedio-tato;
+				padding-left: 20px;
+				padding-right: 20px;
+				border-radius: 10px;
+				margin-top: 10px;
+				margin-bottom: 10px;
+
+				&-price {
+					color: $white;
+				}
+			}
+    }
+
+    &-send {
+		width: 35%;
+
+		@media(max-width: 1024px) {
+			width: 45%;
+		}
+
+		@media(max-width: 680px) {
+			width: 90%;
+		}
+
+		@media(max-width: 425px) {
+			width: 98%;
+		}
+
+        h2 {
+            font-size: 1.5rem;
+            font-family: $font-family-extrabold;
+            text-transform: uppercase;
+		}
+		
+		&-card {
+			@media(max-width: 1024px) {
+				padding: .4rem 1rem;
+			}
+			position: relative;
+			background-color: $white;
+			padding: .4rem 1.8rem;
+			margin: .2rem;
+			border-radius: 5px;
+			font-family: $font-family-bold;
+			cursor: pointer;
+			 
+			&--selected {
+				background-color: $orange;
+				transition-property: background-color;
+				transition-duration: .2s;
+				color: $white;
+			}
+
+			&-zelle {
+				position: relative;
+				width: 150px;
+				margin-right: 5px;
+				border-radius: 5px;
+				border: none;
+				padding: 0;
+				background: #6c1cd3;
+
+				img {
+					height: 32px;
+					width: 100%;
+				}
+			}
+
+			&-paypal {
+				position: relative;
+				background-color: $gray;
+				width: 150px;
+				border-radius: 5px;
+				margin-right: 5px;
+
+				img {
+					height: 32px;
+					width: 100%;
+				}
+			}
+
+			&-dot {
+				width: 9px;
+				height: 9px;
+				background-color: $orange;
+				position: absolute;
+				border-radius: 50%;
+				top: 3px;
+				left: 3px;
+			}
+		}
+
+		&-paymentinfo {
+			margin-top: 1rem;
+			// margin-bottom: 1rem;
+			font-size: .95rem;
+			font-family: $font-family-semibold;
+		}
+
+		&-data {
+			background-color: $white;
+			padding: .7rem;
+			margin-top: 1rem;
+			border-radius: 4px;
+			
+			.btn.btn-outline-secondary.border-left-0 {
+				border-bottom-right-radius: 3px !important;
+				border-top-right-radius: 3px !important;
+			}
+
+			&-checks {
+				display: flex;
+				justify-content: space-evenly;
+			}
+
+			textarea {
+				background-color: $gray;
+				// font-family: $font-family-bold;
+				// font-size: .95rem;
+				color: #000;
+				border-radius: 2px !important;
+				&:active {
+					background-color: $gray;
+				}
+			}
+		}
+
+		&-info {
+			margin-top: 1rem;
+			background-color: white;
+			padding: 1rem;
+			input {
+				margin-right: 10px;
+				background-color: $gray !important;
+				font-family: $font-family-semibold;
+				
+				&:last-child {
+					margin-right: initial;
+				}
+			}
+		}
+    }
+}

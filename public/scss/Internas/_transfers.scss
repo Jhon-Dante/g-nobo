@@ -1,0 +1,15 @@
+// Transferencia
+
+#transfers {
+	button {
+		@include button();
+		min-width: 150px;
+		margin-top: 10px;
+	}
+	form {
+		margin-top: 20px;
+	}
+	label {
+		color: #fff;
+	}
+}

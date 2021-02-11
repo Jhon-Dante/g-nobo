@@ -1,0 +1,25 @@
+// Terminos
+
+#terminos {
+	p:not(.item-right) {
+		@media (min-width: 992px) {
+			column-count: 2;
+			column-gap: 40px;
+		}		
+		color: $black;
+		text-align: justify;
+		padding: 20px;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.item-right {
+		text-align: center;
+		font-family: $font-family-semibold;
+		font-size: 20px;
+		color: $black;
+		img {
+			width: 15px;
+			margin-right: 10px;
+		}
+	}
+}

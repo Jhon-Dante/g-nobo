@@ -1,0 +1,87 @@
+.login-modal {
+    .modal-content {
+        border: 1px solid $orange;
+        padding: 2rem 2rem 1rem 2rem;
+    }
+        .modal-dialog {
+        max-width: 500px !important;
+        margin: 1.75rem auto !important;
+        height: 100% !important;
+        position: relative !important;
+        min-height: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        }
+
+    &-tabs {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    
+    &-border {
+        border-bottom: 2px solid $gray;
+        position: relative;
+        top: -2px;
+        z-index: 1;
+    }
+
+    &-tab {
+        font-size: 1.15rem;
+        font-family: $font-family-bold;
+        border: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        z-index: 2;
+        padding-bottom: .45rem;
+
+        &.selected {
+            border-bottom: 3px solid $orange;
+            color: $orange;
+            font-family: $font-family-semibold;
+        }
+    }
+
+    &-text {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .text-center {
+            color: $black !important;
+            font-family: $font-family-bold;
+        }
+    }
+
+    &-link, &-link:hover {
+        color: $black;
+    }
+    .recovery-option-tabs {
+        border-bottom: none;
+        .recovery-option{
+            padding-left: 3rem;
+            font-weight: bold;
+            background: linear-gradient(180deg, 
+                rgba(0,0,0,0) calc(50% - 1px), 
+                rgba(0,0,0,1) calc(50%), 
+                rgba(0,0,0,0) calc(50% + 1px)
+            );
+            .nav-link{
+                padding: 0.75rem 1rem;
+                width: 50px;
+                height: 50px;
+                background: $orange;
+                border-radius: 50%;
+                &:hover,&:focus{
+                    border-color: transparent;
+                }
+
+                &.isActive {
+                    padding: 1rem 1rem;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,192 @@
+.contenedor__generar{
+    width: 100%;
+}
+.contenedor_principal{
+    width: 100%;
+    display: flex;
+    padding: 1vh 4vh;
+    .content__left {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        .content__colegio {
+            width: 100%;
+            border:thin solid #2f5597;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 14vh;
+            span:nth-child(1){
+                font-size: 2rem;
+            }
+            span:nth-child(2) {
+                font-size: 1.5rem;
+            }
+        }
+        .content__estudiante{
+            margin-top: 4vh;
+            display: flex;
+            flex-wrap: wrap;
+            height: 14vh;
+            .studiante__data{
+                background-color: #e4e4e4;
+                color: white;
+                width: 40%;
+                border: thin solid #e4e4e4;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 1.3rem;
+                span{
+                    margin-left: 2vh;
+                }
+            }
+
+            .studiante__info{
+                width: 60%;
+                border: thin solid #2f5597;
+                border-left:none; 
+                display: flex;
+                align-items: center;
+                span{
+                    margin-left: 2vh;
+                }
+            }
+        }
+
+        .content__abonos {
+            margin-top: 4vh;
+            width: 100%;
+            .content_body{
+                width: 100%;
+                thead{
+                    background-color: black;
+                    color: white;
+                }
+                td, th{
+                    text-align: center;
+                }
+
+                .footer_text{
+                    text-align: center;
+                    font-weight: bold;
+                }
+                .footer_monto{
+                    color: white;
+                    background-color: #cb6120;
+                    text-align: center;
+                }
+            }
+        }
+
+        .content__buttons_pagar{
+            margin: 2vh;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+            button{
+                border-radius: 10px;
+                color: white;
+            }
+            button:nth-child(1){
+                background-color: #2f5597;
+                color: white;
+            }   
+        }
+    }
+
+    .content__right {
+        width: 35%;
+        margin-left: 1vh;
+        .content__caja,.content__fecha{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 14vh;
+            .caja__titulo{
+                background-color: #2f5597;
+                width: 100%;
+                color: white;
+                font-weight: bold;
+                border: thin solid #2f5597;
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                span{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .caja__numero{
+                height: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                align-content: center;
+                width: 100%;
+                border: thin solid #2f5597;
+                span:nth-child(1){
+                    color: red;
+                }
+                span{
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+                }
+            }
+
+            .caja__fecha {
+                height: 50%;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                border: thin solid #2f5597;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+                }
+            }
+        }
+        .content__fecha{
+            margin-top: 4vh;
+        }
+
+        .content__pago {
+            margin-top: 4vh;
+            thead {
+                background-color: #2f5597;
+                color: white;
+            }
+            td {
+                border: thin solid #2f5597;
+            }
+            table tr td{
+                padding: 5px 5px;
+            }
+        }
+    }
+
+    .text-al-center {
+        text-align: center;
+    }
+
+    .background__green {
+        background: #75aa39; /* Old browsers */
+        background: -moz-linear-gradient(top,  #92d050 0%, #75aa39 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #92d050 0%,#75aa39 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #92d050 0%,#75aa39 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+}
+
+.table__content{
+    width: 100%;
+    background-color: white;
+    border: thin solid $dark !important;
+    padding: 4vh;
+}
+.table__content thead th{
+    border-bottom: 2px solid $dark !important;
+}

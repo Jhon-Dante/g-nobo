@@ -1,0 +1,51 @@
+// Mixins
+
+@mixin degradado() {
+  background: rgba(189,143,62,1);
+  background: -moz-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(189,143,62,1)), color-stop(51%, rgba(243,225,126,1)), color-stop(100%, rgba(219,191,88,1)));
+  background: -webkit-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: -o-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: -ms-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: linear-gradient(to right, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd8f3e', endColorstr='#dbbf58', GradientType=1 );
+}
+
+@mixin texto() {
+  background: rgba(189,143,62,1);
+  background: -moz-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(189,143,62,1)), color-stop(51%, rgba(243,225,126,1)), color-stop(100%, rgba(219,191,88,1)));
+  background: -webkit-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: -o-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: -ms-linear-gradient(left, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  background: linear-gradient(to right, rgba(189,143,62,1) 0%, rgba(243,225,126,1) 51%, rgba(219,191,88,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd8f3e', endColorstr='#dbbf58', GradientType=1 );
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+@mixin button() {
+  @include degradado();
+  border: 0px !important;
+  font-family: 'Segoe SemiBold';
+  font-size: 20px;
+}
+
+@mixin size() {
+  min-height: calc(100vh - 84px);
+}
+
+@mixin sizePerfil() {
+  min-height: calc(100vh - 84px - 70px);
+  @media (max-width: 991px) {
+    min-height: auto !important;
+  }
+}
+
+@mixin shadow() {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+@mixin textshadow() {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}

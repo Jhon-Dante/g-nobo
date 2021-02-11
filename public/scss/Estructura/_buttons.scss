@@ -1,0 +1,26 @@
+button.btn, a.btn  {
+    border-radius: 5px;
+}
+.btn-primary {
+    background-color: $verde-tato;
+    border: none;
+    color: $white;
+    font-size: 0.825rem;
+    font-family: $font-family;
+    font-weight: 600;
+    padding: .275rem 3.95rem;
+    
+    &:hover {
+        background-color: rgba($naranja-tato, .85);
+        color: $white !important;
+    }
+
+    &:active {
+        background-color: rgba($naranja-tato, .85) !important;
+        color: $white !important;
+    }
+}
+
+.btn-viveres {
+    min-width: 200px;
+}

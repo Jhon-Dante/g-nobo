@@ -1,0 +1,25 @@
+// Condiciones de Compra
+
+#condiciones {
+	p:not(.item-right) {
+		@media (min-width: 992px) {
+			column-count: 2;
+			column-gap: 40px;
+		}		
+		color: $white;
+		text-align: justify;
+		padding: 20px;
+		padding-right: 30px;
+		padding-left: 30px;
+	}
+	.item-right {
+		text-align: center;
+		font-family: 'Segoe Bold Italic';
+		font-size: 20px;
+		color: $white;
+		img {
+			width: 15px;
+			margin-right: 10px;
+		}
+	}
+}

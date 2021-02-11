@@ -1,0 +1,42 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "node_modules/materialize-css/sass/materialize";
+
+//@import "../../../node_modules/materialize-css/sass/materialize";
+
+@import "components/typography";
+
+@import "components/checkbox";
+
+@import "components/general";
+
+@import "components/sidebar";
+
+@import "components/card";
+
+@import "components/login";
+
+@import "components/informe";
+
+@import "components/generateIngress";
+
+@import "components/checkbox";
+@import "components/voucer";
+
+@import "components/blog";
+
+@import "../../../public/bower_components/bootstrap/dist/css/bootstrap.min";
+@import "../../../public/bower_components/font-awesome/css/font-awesome.min";
+@import "../../../public/bower_components/sweetalert/dist/sweetalert";
+@import "../../../public/bower_components/hold-on/src/css/HoldOn.min";
+@import "../../../public/bower_components/owl-carousel/dist/assets/owl.carousel.min";
+@import "../../../public/bower_components/owl-carousel/dist/assets/owl.theme.default.min";
+
+@import "public/css/main"

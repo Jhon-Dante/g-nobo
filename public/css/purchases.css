@@ -1,0 +1,45 @@
+.header {
+  margin-top: 1rem;
+  display: flex;
+  border: 1px solid red;
+}
+
+img.logo {
+  width: 180px;
+  height: auto;
+}
+
+.title {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.date span {
+  font-weight: bold;
+}
+
+.title h2 {
+  text-transform: uppercase;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-weight-light {
+  font-weight: 200 !important;
+}
+
+.table tr th {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.table tr td {
+  border: 1px solid;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+}

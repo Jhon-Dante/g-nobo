@@ -1,0 +1,46 @@
+// Intro
+
+#intro {
+	min-height: 100vh;
+	background-image: url('../img/intro.jpg');
+	@media (max-width: 767px) {
+		background-image: url('../img/intro-responsive.jpg');
+	}
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	img {
+		display: block !important;
+		width: 400px;
+		@media (max-width: 600px) {
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	h2 {
+		font-family: 'Segoe Bold Italic';
+		color: $white;
+		text-align: center;
+		font-size: 30px;
+		margin-bottom: 60px;
+		margin-top: 10px;
+		@include textshadow();
+	}
+	button {
+		@include button();
+		border-top-right-radius: 30px !important;
+		border-top-left-radius: 0px !important;
+		border-bottom-right-radius: 0px !important;
+		border-bottom-left-radius: 30px !important;
+		min-width: 170px !important;
+		font-size: 25px;
+		font-family: 'Segoe Bold';
+		font-style: italic;
+	}
+}

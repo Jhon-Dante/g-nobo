@@ -1,0 +1,225 @@
+#ver-producto {
+  font-family: "Montserrat-Bold";
+  .row-title {
+    margin-bottom: 20px;
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      text-decoration: none !important;
+      img {
+        width: 10px;
+        margin-right: 10px;
+        position: relative;
+        top: -2.5px;
+      }
+    }
+    h3 {
+      color: #000000;
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+    select {
+      max-width: 250px;
+      @media (min-width: 768px) {
+        float: right;
+      }
+      @media (max-width: 767px) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .row-title::after {
+    content: "";
+    height: 2px;
+    background-color: #debc61;
+    display: block;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .image-modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-image 0.2s ease-in-out;
+    // @media (max-width: 767px) {
+    //   min-height: 500px;
+    // }
+    i {
+      font-size: 40px;
+      color: #fff;
+      cursor: pointer;
+      .fa-chevron-right {
+        margin-right: 10px;
+        order: 2;
+      }
+      .fa-chevron-left {
+        margin-left: 10px;
+      }
+    }
+  }
+  .agregado {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: "Segoe Bold";
+    img {
+      width: 20px;
+      position: relative;
+      top: -2.5px;
+      left: 2.5px;
+    }
+  }
+  .almayor {
+    font-size: 11px;
+    margin-bottom: 0px;
+    position: relative;
+    top: -15px;
+    font-style: italic;
+  }
+  .producto-container {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+    }
+    img.img-principal {
+      width: 100%;
+      // display: none;
+    }
+    .image-modal {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+    .row, [class*=col-md-], [class*=col-lg-] {
+      padding: 0px !important;
+      margin: 0px !important;
+    }
+    .container-price-description {
+      padding: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      h5 {
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      h4 {
+        font-family: "Segoe Bold";
+        font-size: 15px;
+      }
+      .precio {
+        color: #debc61;
+        font-size: 20px;
+        font-family: "Segoe Bold";
+      }
+      .strong {
+        line-height: 0.8;
+        font-size: 14px;
+      }
+      .ellipsis {
+        line-height: 20px;
+        position: relative;
+        height: 40px;
+        overflow: hidden;
+      }
+      a {
+        font-family: "Segoe Bold";
+        color: #debc61;
+      }
+      .container-price {
+        .precio {
+          font-family: "Montserrat-Bold";
+          font-size: 1.1rem;
+          background-color: #fff;
+          border-radius: 3px;
+          padding: 0.1rem 0.4rem;
+          margin-left: auto;
+          color: #1772CB;
+        }
+      }
+    }
+    .container-texto {
+      overflow: auto;
+    }
+    .container-title {
+      padding: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      .btn-add {
+        background: #bd8f3e;
+        background: -webkit-gradient(left top, right top, color-stop(0%, #bd8f3e), color-stop(51%, #f3e17e), color-stop(100%, #dbbf58));
+        background: linear-gradient(to right, #bd8f3e 0%, #f3e17e 51%, #dbbf58 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#bd8f3e", endColorstr="#dbbf58", GradientType=1 );
+        border-radius: 0px !important;
+        border: 0px !important;
+        min-width: 100px;
+        height: 32px;
+        position: relative;
+        top: -4px;
+        img {
+          width: 18px;
+          position: relative;
+          top: -3px;
+        }
+      }
+      select {
+        max-width: 90%;
+      }
+      @media (max-width: 767px) {
+        max-width: 100%;
+      }
+      a {
+        display: block;
+        font-family: "Segoe Bold";
+        color: #000 !important;
+        margin-top: 5px;
+        text-decoration: none !important;
+      }
+      label {
+        font-family: "Segoe Bold";
+      }
+    }
+    .item-cantidad {
+      border: 1px solid #c0c0c0;
+      display: inline-block;
+      background-color: #fff;
+      color: #000;
+      .add, .remove {
+        padding: 0px !important;
+        border-radius: 0px !important;
+        margin-top: -7.5px;
+        background-color: #fff !important;
+        position: relative;
+        img {
+          width: 15px;
+          margin: 0 auto;
+          margin-left: 5px;
+          margin-right: 5px;
+          position: relative;
+          top: -1.5px;
+          cursor: pointer;
+        }
+      }
+      .add {
+        right: 1.5px;
+      }
+      .remove {
+        left: 1.5px;
+      }
+      span {
+        font-size: 20px;
+        border-right: 1px solid #c0c0c0;
+        border-left: 1px solid #c0c0c0;
+        width: auto;
+        min-width: 35px;
+        padding-right: 5px;
+        padding-left: 5px;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+  }
+}

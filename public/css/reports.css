@@ -1,0 +1,284 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@page {
+  margin: 2cm 2cm 2cm 2cm;
+}
+
+.header {
+  height: 2.5cm;
+}
+
+img {
+  page-break-before: auto;
+  /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+  page-break-after: auto;
+  /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+  page-break-inside: avoid;
+  /* or 'auto' */
+}
+
+main {
+  position: relative;
+}
+
+table {
+  width: 100%;
+}
+
+table tr td {
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 11px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+table thead tr th {
+  text-align: center;
+  font-size: 11px;
+}
+
+table tbody tr td {
+  font-size: 12px;
+}
+
+tfoot tr td {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.text-min {
+  font-size: x-small;
+  text-align: left !important;
+}
+
+.sborder {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+.signature {
+  height: 15px;
+  vertical-align: bottom;
+}
+
+.h2-head {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.stylesheet-logo {
+  width: 30%;
+  height: 3.5cm;
+  text-align: center;
+}
+
+.page-break {
+  page-break-inside: avoid;
+}
+
+.flex {
+  display: flex;
+}
+
+.stylesheet-letterhead {
+  width: 70%;
+  margin-left: 30%;
+  text-align: left;
+}
+
+.stylesheet-type {
+  display: inline-block;
+  width: 30%;
+  height: 3.5cm;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+.stylesheet-logo img.img {
+  position: relative;
+  left: 0;
+}
+
+.text-letterhead {
+  line-height: 0.3cm;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.font-address {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.font-title {
+  padding-top: 15px;
+  text-align: center;
+  line-height: 0.01cm;
+}
+
+.font-title h3 {
+  font-size: 18px;
+}
+
+.hr {
+  /* margin: 10px 0 10px; */
+  border: 1px solid black;
+}
+
+.font-title h4 {
+  font-size: 14px;
+}
+
+.mailto {
+  font-size: 0.7rem;
+  font-weight: 300;
+  line-height: 0cm;
+}
+
+.font-bars {
+  position: absolute;
+  top: 2.85cm;
+  right: 1cm;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 0cm;
+}
+
+.stylesheet-folio {
+  position: absolute;
+  right: 2cm;
+  top: 0.26cm;
+  left: 2cm;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.border-none {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+.border-none-last {
+  border-top: 0;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.left {
+  padding-left: 0.3rem;
+}
+
+.right {
+  padding-right: 0.5rem;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.font-weight-light {
+  font-weight: lighter;
+  font-size: 0.3cm;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-size-small {
+  font-size: 10px;
+}
+
+.font-size-medium {
+  font-size: 13px;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-red {
+  color: red;
+}
+
+.padding {
+  padding: 0.1cm;
+}
+
+.min-font {
+  font-size: 11px;
+}
+
+.min-lineheight {
+  line-height: 1.7;
+}
+
+.description {
+  text-align: left;
+  vertical-align: top;
+}
+
+.max-width {
+  width: 60%;
+  line-height: 1.5;
+}
+
+.width {
+  width: 13%;
+}
+
+.medium-width {
+  width: 10%;
+}
+
+.min-width {
+  width: 6%;
+}
+
+.border-black {
+  border-bottom: 0.5px solid black;
+  padding-bottom: 35px;
+}
+
+.bg-black {
+  position: absolute;
+  width: 100%;
+  height: 1cm;
+  top: 1.5cm;
+  right: 0cm;
+  color: white;
+  background-color: black;
+}
+
+.bg-ligthgray {
+  position: absolute;
+  width: 100%;
+  height: 1cm;
+  top: 1.25cm;
+  right: 0cm;
+  color: black;
+  background-color: lightgray;
+}
+
+.bg-gray {
+  background-color: lightgray;
+  color: black;
+}

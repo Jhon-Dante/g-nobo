@@ -1,0 +1,44 @@
+.cart-modal {
+  .modal-dialog {
+    margin-bottom: 0;
+    height: 100%;
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .modal-content {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+    width: 345px;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    z-index: 99;
+  }
+  .list-cart {
+    overflow-y: auto;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  .modal-footer {
+    flex: 0 0 auto;
+    display: block;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    .bt-cart {
+      background-color: $verde-tato;
+      border-color: $verde-tato;
+      &:hover {
+         background-color: $naranja-tato;
+         border-color: $naranja-tato;
+      }
+    }
+  }
+  a.btn-primary {
+    display: inline-block;
+  }
+}
