@@ -218,7 +218,7 @@
 		],
 
 		'Tienda' => [
-			'Title' => 'Tato',
+			'Title' => 'Tienda',
 			'Catalogo' => 'Catálogo',
 			'Bolivar' => 'Bolívar Venezolano (VES)',
 			'Dolar' => 'Dolar Estadounidense (USD)',

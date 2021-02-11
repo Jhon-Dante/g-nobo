@@ -22748,7 +22748,7 @@ html, body {
 }
 
 body {
-  background: #F4C4F2;
+  background: white;
   color: #000;
   font-family: "BogleWeb-Regular";
   display: flex;
@@ -22769,7 +22769,7 @@ body main {
 /* Track */
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #9cc33b;
+  background: black;
   border: solid 0.5px #fff;
 }
 
@@ -23006,7 +23006,7 @@ header .money-bar .mas-v p {
 }
 header .container-form-header {
   position: relative;
-  width: 50%;
+  width: 100% !important;
 }
 
 header .container-form-header ul {
@@ -23075,7 +23075,7 @@ header .navbar {
   z-index: 1;
   min-height: 71.64px;
   flex-wrap: inherit;
-  background-color: #f7f7f7;
+  background-color: white;
   position: relative;
 }
 
@@ -23347,15 +23347,16 @@ header .navbar-right .cart-header img {
   }
 }
 header .navbar-brand .logo {
-  width: 75px;
+  width: 140px;
   margin-right: 20px;
   margin-left: 20px;
 }
 
 @media (max-width: 600px) {
   header .navbar-brand .logo {
-    width: 40px;
-    margin: 0px !important;
+    width: 100px;
+    margin-bottom: 5px;
+    /*margin: 0px !important;*/
   }
 }
 @media (max-width: 1024px) {
@@ -23366,7 +23367,7 @@ header .navbar-brand .logo {
 }
 header .navbar-form {
   background-color: #e1e1e1;
-  border-radius: 15px;
+  border-radius: 2px;
   display: flex;
 }
 
@@ -23394,11 +23395,6 @@ header .navbar-form-button {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  header .navbar-form-button {
-    background-color: #fff;
-  }
-}
 header .navbar-form-button-sm {
   display: flex;
   justify-content: center;
@@ -23608,7 +23604,7 @@ footer.footer {
 }
 footer.footer p {
   text-align: justify;
-  color: #fff;
+  color: white;
   font-size: 14px;
   margin-top: 15px;
 }
@@ -23619,7 +23615,7 @@ footer.footer p {
   }
 }
 footer.footer h5 {
-  color: #9cc33b;
+  color: white;
   font-weight: 600;
   text-align: left;
 }
@@ -23662,7 +23658,7 @@ footer.footer .img-rf img {
 }
 
 footer.footer .bg-left {
-  background: #333333;
+  background: #09031d;
   padding: 25px 16px;
 }
 
@@ -23672,7 +23668,7 @@ footer.footer .bg-left {
   }
 }
 footer.footer .bg-right {
-  background: #545454;
+  background: #09031d;
   padding: 25px 16px;
 }
 
@@ -23805,7 +23801,7 @@ button.btn, button.btn-large, button.btn-small, a.btn, a.btn-large, a.btn-small 
 }
 
 .btn-primary {
-  background-color: #0028BB;
+  background-color: white;
   border: none;
   color: #fff;
   font-size: 0.825rem;
@@ -23815,12 +23811,14 @@ button.btn, button.btn-large, button.btn-small, a.btn, a.btn-large, a.btn-small 
 }
 
 .btn-primary:hover {
-  background-color: rgba(247, 147, 30, 0.85);
+  /*background-color: rgba(247, 147, 30, 0.85);*/
+  background-color: white !important;
   color: #fff !important;
 }
 
 .btn-primary:active {
-  background-color: rgba(247, 147, 30, 0.85) !important;
+  /*background-color: rgba(247, 147, 30, 0.85) !important;*/
+  background-color: white !important;
   color: #fff !important;
 }
 
@@ -23840,7 +23838,7 @@ button.btn, button.btn-large, button.btn-small, a.btn, a.btn-large, a.btn-small 
 }
 
 .filtro-say {
-  background-color: #9cc33b;
+  background-color: #2c02d6;
   font-family: "BogleWeb-Bold";
   color: #fff;
   padding: 0.5rem 2rem;
@@ -23849,7 +23847,7 @@ button.btn, button.btn-large, button.btn-small, a.btn, a.btn-large, a.btn-small 
 
 @media (max-width: 767px) {
   .filtro-say {
-    background-color: #698523;
+    background-color: #2c02d6;
   }
 }
 .filtro-favorito-ref {
@@ -24169,7 +24167,7 @@ nav .navbar-right .dropdown span {
 }
 
 header .navbar-right-badge {
-  background-color: #f7931e;
+  background-color: #3FE79D;
   color: #fff;
 }
 
@@ -24308,7 +24306,7 @@ body {
 }
 
 #divMenu li:hover {
-  background-color: #9cc33b;
+  background-color: #2125299e;
   color: #fff;
   transition: 0.3s ease-out;
 }
@@ -24832,7 +24830,7 @@ body {
   }
 }
 #tienda .menu-lx {
-  background-color: #f7f7f7;
+  background-color: white;
   border-radius: 0.7rem 0.7rem 0 0;
   margin-top: -78px;
 }

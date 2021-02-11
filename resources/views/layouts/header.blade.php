@@ -26,11 +26,11 @@
 					<span v-on:click.prevent="responsiveHeader()" class="navbar-form-quit-search hidden-lg" :class="{ 'hidden-sm': !isVisible }">x</span>
 					<input v-model="query" v-on:keyup="autocomplete" autocomplete="off" class="form-control navbar-form-input" name="query" type="text" placeholder="Buscar productos" aria-label="Search" />
 					<button class="navbar-form-button">
-						<img src="{{ asset('img/icons/search.svg') }}" alt="Search" width="18" height="18">
+						<img src="{{ asset('img/icons/search.png') }}" alt="Search" width="18" height="18">
 					</button>
 				</div>
 				<button class="navbar-form-button-sm hidden-lg" :class="{ 'hidden-sm': isVisible }" v-on:click.prevent="responsiveHeader()">
-					<img src="{{ asset('img/icons/search.svg') }}" alt="Search" width="18" height="18">
+					<img src="{{ asset('img/icons/search.png') }}" alt="Search" width="18" height="18">
 				</button>
 			</form>
 			<ul v-if="(suggestions.length > 0 || categories.length > 0) || loadQuery || (queryLoaded && query.length > 0)" v-cloak>
@@ -63,7 +63,7 @@
 
 		<div class="navbar-right">
 
-			<div class="dropdown">
+			{{--<div class="dropdown">
 				<a  
 				@auth
 				href="{{ url('perfil') }}" 
@@ -75,28 +75,28 @@
 				>
 				<img src="{{ asset('img/icons/login.svg') }}" alt="login" class="mr-1">
 				<span class="font-bold">@auth {{ auth()->user()->name }} @else Entrar @endauth </span>
-			</a>
+				</a>
 
-			@if (Auth::check())
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a  
-				@auth
-				href="{{ url('perfil') }}" 
-				@else 
-				href="#!"
-				data-toggle="modal" data-target="#loginModal"
-				@endauth
-				class="navbar-right-concealable dropdown-item"
-				>
-				<span>@auth Perfil @else Entrar @endauth </span>
+				@if (Auth::check())
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a  
+						@auth
+						href="{{ url('perfil') }}" 
+						@else 
+						href="#!"
+						data-toggle="modal" data-target="#loginModal"
+						@endauth
+						class="navbar-right-concealable dropdown-item"
+						>
+						<span>@auth Perfil @else Entrar @endauth </span>
 
-			</a>
-			<a class="dropdown-item" href="{{ URL('logout') }}">@lang('Page.Perfil.Logout')</a>
-		</div>
-		@endif
-	</div>
+						</a>
+						<a class="dropdown-item" href="{{ URL('logout') }}">@lang('Page.Perfil.Logout')</a>
+					</div>
+				@endif
+			</div>--}}
 
-			<div class="dropdown show" :class="{ 'hidden-responsive': isVisible }">
+			{{-- <div class="dropdown show" :class="{ 'hidden-responsive': isVisible }">
 				<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<img class="img-monedas mr-1" src="{{ URL('img/icons/moneda.svg') }}" />
 					<span class="font-bold text-white text-responsive" v-cloak>
@@ -105,42 +105,21 @@
 				</a>
 				<div id="dropdown-currencies-header" class="dropdown-menu text-center" aria-labelledby="dropdownMenuLink">
 					<a v-if="currency == 2" href="{{ URL('change-currency/1') }}" >
-						{{-- <span class="font-bold" v-cloak>VES</span> --}}
 						<img src="{{ asset('img/icons/ve.png') }}" alt="VE" width="25">
 					</a>
 					<a v-if="currency == 1" href="{{ URL('change-currency/2') }}">
-						{{-- <span class="font-bold" v-cloak>USD</span> --}}
-					<img src="{{ asset('img/icons/eu.png') }}" alt="EU" width="25">
+						<img src="{{ asset('img/icons/eu.png') }}" alt="EU" width="25">
 					</a>
 				</div>
-			</div>
+			</div> --}}
 
-		
-			{{--<div class="navbar-right-social">
-				<a target="_blank" href="{{ $_sociales->facebook }}">
-					<img src="{{ asset('img/icons/facebook.svg') }}" alt="facebook">
-				</a>
-				<a target="_blank" href="{{ $_sociales->instagram }}">
-					<img src="{{ asset('img/icons/instagram.svg') }}" alt="instagram">
-				</a>
-			</div>--}}
 
-			<a 	@auth
-					href="{{ url('favoritos') }}" 
-				@else 
-					href="#!"
-					data-toggle="modal" data-target="#loginModal"
-				@endauth
-				 href="{{ url('favoritos') }}" class="navbar-right-ocult">
-				<img src="{{ asset('img/icons/favorito.svg') }}" alt="favorito">
-				<span class="font-bold"> &nbsp;Favoritos</span>
-			</a> 
 			<div class="container-form-header form-responsive">
 				<form action="{{ route('search') }}" class="navbar-center" autocomplete="off">
 					<div class="navbar-form">
 						<input v-model="query" v-on:keyup="autocomplete" autocomplete="off" class="form-control navbar-form-input" name="query" type="text" placeholder="Buscar" aria-label="Search">
 						<button class="navbar-form-button">
-							<img src="{{ asset('img/icons/search.svg') }}" alt="Search" width="18" height="18">
+							<img src="{{ asset('img/icons/search.png') }}" alt="Search" width="18" height="18">
 						</button>
 					</div>
 				</form>
@@ -171,6 +150,18 @@
 					</li>
 				</ul>
 			</div>
+				<a 	@auth
+						href="{{ url('favoritos') }}" 
+					@else 
+						href="#!"
+						data-toggle="modal" data-target="#loginModal"
+					@endauth
+					class="btn btn-primary btn-xs rounded"
+					style="background-color: none !important" 
+					href="{{ url('favoritos') }}" class="navbar-right-ocult">
+					<img src="{{ asset('img/icons/favorito.png') }}" alt="favorito">
+					<span class="font-bold"></span>
+				</a> 
 					@if(!Request::is('verificacion'))
 				<a
 					:class="{ 'hidden-responsive': isVisible }"
@@ -188,7 +179,7 @@
 			@endif
 		</div>
 	</nav>
-		<section class="money-bar shadow-sm">
+		<section class="money-bar">
 			<div class="container">
 				<div class="row">
 					

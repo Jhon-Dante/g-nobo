@@ -80,7 +80,7 @@
 		@if (!isset ($category_id))
 		<section class="banner-menu">
 			<div class="container mg-top">
-				<div class="row h-50">
+				<div class="row h-100">
 					<div class="col-md-3">
 						<div class="menu-lx">
 							<div class="filtro-say">
@@ -96,103 +96,90 @@
 								</div>
 							</div>
 
+							<div class="desk-m  category-menu">
+								<div id="divMenu">    
+									<ul >    
+										<li  v-for="category in categoriesFilters" v-on:click="selectCategorie(category.id)"  class="item-desplegable filtro-list-item">
+											<div class="filtro-list-category">
+												  <div  @click="filter(category.id, '')">
+					                            <div class="filtro-list-category">
+					                                @if (\App::getLocale() == 'es') @{{ category.name }} @else @{{ category.name_english }} @endif
+					                            </div>
+					                        </div>
+											</div>
 
+											<ul  class="filtro-list-two">
+												<li v-for="subcategory in category.subcategories" class="filtro-list-two-item">
+													<label class="form-check-label" @click="filter(category.id, subcategory.id)">
+														@if (\App::getLocale() == 'es') 
+														@{{ subcategory.name }} 
+														@else 
+														@{{ subcategory.name_english }} 
+														@endif
+													</label>
+												</li>
+											</ul>
+										</li>
+									</ul>    
+								</div>
+							</div>
 
-		<div class="desk-m  category-menu">
-			<div id="divMenu">    
-				<ul >    
-					<li  v-for="category in categoriesFilters" v-on:click="selectCategorie(category.id)"  class="item-desplegable filtro-list-item">
-						<div class="filtro-list-category">
-							  <div  @click="filter(category.id, '')">
-                            <div class="filtro-list-category">
-                                @if (\App::getLocale() == 'es') @{{ category.name }} @else @{{ category.name_english }} @endif
-                            </div>
-                        </div>
+							<div class="mov-m">
+								<template v-if="!category_selected">
+							            <ul class="filtro-list">
+							                <li v-for="category in categoriesFilters" v-on:click="selectCategorie(category.id)" class="item-desplegable filtro-list-item">
+							                    <div class="filtro-list-category">
+							                        @if (\App::getLocale() == 'es') @{{ category.name }} @else @{{ category.name_english }} @endif
+							                        <img src="{{ asset('img/icons/flecha-derecha-yellow.svg') }}" alt="flecha">
+							                    </div>
+							                </li>
+							            </ul>
+							        </template>
+							        <template v-if="category_selected">
+							            <div class="filtro-categorias filtro-back" v-on:click="category_selected = null">
+							                <img src="{{ asset('img/icons/flecha-izquierda-gray.svg') }}" alt="flecha">
+							                Menu Principal
+							            </div>
+							            <ul class="filtro-list">
+							                <template v-for="category in categoriesFilters">
+							                    <template v-if="category_selected == category.id">
+							                        <li class="item-desplegable filtro-list-item item-principal" @click="filter(category.id, '')">
+							                            <div class="filtro-list-category">
+							                                @if (\App::getLocale() == 'es') @{{ category.name }} @else @{{ category.name_english }} @endif
+							                            </div>
+							                        </li>
+							                        <li v-for="subcategory in category.subcategories" @click="filter(category.id, subcategory.id)" class="item-desplegable filtro-list-item">
+							                            <div class="filtro-list-category" @click="filter(category.id, subcategory.id)">
+							                                @if (\App::getLocale() == 'es') @{{ subcategory.name }} @else @{{ subcategory.name_english }} @endif
+							                            </div>
+							                        </li>
+							                    </template>
+							                </template>
+							            </ul>
+							        </template>
+							</div>
 						</div>
-
-						<ul  class="filtro-list-two">
-							<li v-for="subcategory in category.subcategories" class="filtro-list-two-item">
-								<label class="form-check-label" @click="filter(category.id, subcategory.id)">
-									@if (\App::getLocale() == 'es') 
-									@{{ subcategory.name }} 
-									@else 
-									@{{ subcategory.name_english }} 
-									@endif
-								</label>
-							</li>
-						</ul>
-					</li>
-
-				</ul>    
-			</div>
-		</div>
-
-
-<div class="mov-m">
-	<template v-if="!category_selected">
-            <ul class="filtro-list">
-                <li v-for="category in categoriesFilters" v-on:click="selectCategorie(category.id)" class="item-desplegable filtro-list-item">
-                    <div class="filtro-list-category">
-                        @if (\App::getLocale() == 'es') @{{ category.name }} @else @{{ category.name_english }} @endif
-                        <img src="{{ asset('img/icons/flecha-derecha-yellow.svg') }}" alt="flecha">
-                    </div>
-                </li>
-            </ul>
-        </template>
-        <template v-if="category_selected">
-            <div class="filtro-categorias filtro-back" v-on:click="category_selected = null">
-                <img src="{{ asset('img/icons/flecha-izquierda-gray.svg') }}" alt="flecha">
-                Menu Principal
-            </div>
-            <ul class="filtro-list">
-                <template v-for="category in categoriesFilters">
-                    <template v-if="category_selected == category.id">
-                        <li class="item-desplegable filtro-list-item item-principal" @click="filter(category.id, '')">
-                            <div class="filtro-list-category">
-                                @if (\App::getLocale() == 'es') @{{ category.name }} @else @{{ category.name_english }} @endif
-                            </div>
-                        </li>
-                        <li v-for="subcategory in category.subcategories" @click="filter(category.id, subcategory.id)" class="item-desplegable filtro-list-item">
-                            <div class="filtro-list-category" @click="filter(category.id, subcategory.id)">
-                                @if (\App::getLocale() == 'es') @{{ subcategory.name }} @else @{{ subcategory.name_english }} @endif
-                            </div>
-                        </li>
-                    </template>
-                </template>
-            </ul>
-        </template>
-</div>
-
-
-</div>
-</div>
-<div class="col-md-9 align-self-center">
-	<div class="contenido contenido-no-padding" id="home" @if (isset($slider[0])) style="background-image: url({{ URL('img/slider-fijo.jpg') }})" @endif>
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				@foreach($slider as $key => $item)
-				<li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}" class="@if ($key == 0) active @endif"></li>
-				@endforeach
-			</ol>
-			<div class="carousel-inner">
-				@foreach($slider as $key => $item)
-				<div class="carousel-item @if ($key == 0) active @endif" style="background-image: url({{ URL('img/slider/'.$item->foto) }})">
+					</div>
+					<div class="col-md-9 align-self-center">
+						<div class="contenido contenido-no-padding" id="home" @if (isset($slider[0])) style="background-image: url({{ URL('img/slider-fijo.jpg') }})" @endif>
+							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									@foreach($slider as $key => $item)
+										<li data-target="#carouselExampleIndicators" data-slide-to="{{ $key }}" class="@if ($key == 0) active @endif"></li>
+									@endforeach
+								</ol>
+								<div class="carousel-inner">
+									@foreach($slider as $key => $item)
+									<div class="carousel-item @if ($key == 0) active @endif" style="background-image: url({{ URL('img/slider/'.$item->foto) }})">
+									</div>
+									@endforeach
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				@endforeach
 			</div>
-<!--<a class="carousel-control-prev" data-target="#carouselExampleIndicators" role="button" data-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-</a>
-<a class="carousel-control-next" data-target="#carouselExampleIndicators" role="button" data-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-</a>-->
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</section>
+		</section>
 
 @endif
 
