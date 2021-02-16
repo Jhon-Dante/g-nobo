@@ -205,7 +205,7 @@
 @stop
 
 @section('scripts')
-	{{ HTML::Script('bower_components/owl-carousel/dist/owl.carousel.min.js') }}
+	<script type="text/javascript" src="{{asset('bower_components/owl-carousel/dist/owl.carousel.min.js') }}"></script>
 	<script type="text/javascript">
 
 	$(document).ready(function () {
@@ -230,7 +230,7 @@
 				currency: currentCurrency,
 				producto: null,
 				cart: [],
-				exchange: '{{ $_change }}',
+				exchange: '@{{ $_change }}',
 				img_preload: [],
 				imagePreview: '',
 				base_preload: '{{ URL('img/products') }}' + '/',
@@ -498,7 +498,7 @@
 	</script>
 @stop
 @section('styles')
-	{{ HTML::Style("bower_components/owl-carousel/dist/assets/owl.carousel.min.css") }}
+	<script type="text/javascript" src="{{ asset('bower_components/owl-carousel/dist/assets/owl.carousel.min.css') }}"></script>
 	<style>
 		*{
 			font-family: 'BogleWeb', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;

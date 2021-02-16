@@ -277,10 +277,10 @@
 						<div class="verification-send-card-dot" v-if="form.payment_method == zelle_method"></div>
 						<img src="{{ asset('img/icons/zellelogo.svg') }}" alt="zelle">
 					</div>
-					<div class="verification-send-card-paypal shadow-sm" @click="form.payment_method = paypal_method">
+					{{--<div class="verification-send-card-paypal shadow-sm" @click="form.payment_method = paypal_method">
 						<div class="verification-send-card-dot" v-if="form.payment_method == paypal_method"></div>
 						<img src="{{ asset('img/icons/paypallogo.svg') }}" alt="paypal">
-					</div>
+					</div>--}}
 					<div class="verification-send-card shadow-sm"  @click="form.payment_method = cash_method">
 						<div class="verification-send-card-dot" v-if="form.payment_method == cash_method"></div>
 						Efectivo
